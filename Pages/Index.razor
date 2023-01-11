@@ -1,0 +1,34 @@
+﻿@page "/"
+@using ChatterBox.Services
+
+<PageTitle>Index</PageTitle>
+
+<h1>Say Hi To Marv</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+Enter an animal name 
+
+<input @bind="_animalName"/>
+<button @onclick="GetAnimalNames">Submit</button>
+
+@_animalNames
+
+@code{
+    
+    [Inject]
+    public IOpenAIService OpenAiService { get; set; }
+
+    private string _animalName = "";
+    private string _animalNames = "";
+
+    async Task GetAnimalNames()
+    {
+        if (string.IsNullOrEmpty(_animalName))
+            return;
+
+        _animalNames = await OpenAiService.GetAnimalNames(_animalName);
+    }
+}

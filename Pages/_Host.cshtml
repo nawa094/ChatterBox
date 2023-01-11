@@ -1,0 +1,12 @@
+﻿@page "/"
+@namespace ChatterBox.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<component type="typeof(App)" render-mode="ServerPrerendered" />
+
+<head>
+    <script src="js/index.bundle.js"></script>
+</head>
