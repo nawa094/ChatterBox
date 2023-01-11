@@ -478,3 +478,6 @@ $RECYCLE.BIN/
 
 # .env file
 NpmJs/*.env
+
+# IntelliJ
+.idea
