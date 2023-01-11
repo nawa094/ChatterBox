@@ -31,6 +31,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+wwwroot/js/*bundle.js
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -481,3 +482,5 @@ NpmJs/*.env
 
 # IntelliJ
 .idea
+
+
